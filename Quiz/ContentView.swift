@@ -45,20 +45,32 @@ struct ContentView: View {
             
             HStack {
                 VStack {
-                    Button(questions[currentQuestion].option1) {
-                        didTapOption(optionNumber: 1)
+                    Button{
+                        didTapOption(optionNumber: 1) 
+                     } label: {
+                        Image(systemName: "triangle.fill")
+                        Text(questions[currentQuestion].option1)
                     }
-                    Button(questions[currentQuestion].option2) {
+                    Button{
                         didTapOption(optionNumber: 2)
+                     } label: {
+                        Image(systemName: "circle.fill")
+                        Text(questions[currentQuestion].option2)
                     }
                 }
                 .padding()
                 VStack {
-                    Button(questions[currentQuestion].option3) {
+                    Button{
                         didTapOption(optionNumber: 3)
+                     } label: {
+                        Image(systemName: "diamond.fill")
+                        Text(questions[currentQuestion].option3)
                     }
-                    Button(questions[currentQuestion].option4) {
+                    Button{
                         didTapOption(optionNumber: 4)
+                     } label: {
+                        Image(systemName: "square.fill")
+                        Text(questions[currentQuestion].option4)
                     }
                 }
                 .padding()
